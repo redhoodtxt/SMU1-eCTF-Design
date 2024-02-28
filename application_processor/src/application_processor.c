@@ -27,6 +27,10 @@
 #include "board_link.h"
 #include "simple_flash.h"
 #include "host_messaging.h"
+
+// Define CRYPTO_EXAMPLE to include simple_crypto.h
+#define CRYPTO_EXAMPLE 1
+
 #ifdef CRYPTO_EXAMPLE
 #include "simple_crypto.h"
 #endif
@@ -113,6 +117,9 @@ flash_entry flash_status;
 
 */
 int secure_send(uint8_t address, uint8_t* buffer, uint8_t len) {
+
+    // TODO: HMAC implementation
+
     return send_packet(address, len, buffer);
 }
 

@@ -11,6 +11,12 @@
  * @copyright Copyright (c) 2024 The MITRE Corporation
  */
 
+// for the below to be compiled, the CRYPTO_EXAMPLE flag must be defined
+// this can be done by adding -DCRYPTO_EXAMPLE to the CFLAGS in the Makefile
+// or by adding #define CRYPTO_EXAMPLE to the top of this file
+
+#define CRYPTO_EXAMPLE 1
+
 #if CRYPTO_EXAMPLE
 
 #include "simple_crypto.h"
